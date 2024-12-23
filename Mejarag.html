@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="id"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tri Hita Karana - Tradisi Mejarag</title>
+  <style>
+   /* Gaya Dasar */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefaf2;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a0522d;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif; /* Font yang lebih klasik */
+  text-align: center;
+  flex-grow: 1;
+}
+
+.navbar-image {
+  width: 80px;  /* Atur lebar gambar */
+  height: auto; /* Tinggi gambar akan menyesuaikan */
+  object-fit: contain; /* Menjaga rasio gambar */
+}
+
+.navbar-image.left {
+  margin-right: 1rem; /* Memberikan ruang antara gambar kiri dan judul */
+}
+
+.navbar-image.right {
+  margin-left: 1rem; /* Memberikan ruang antara gambar kanan dan judul */
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+    header {
+      background: #a0522d; /* Warna cokelat khas ornamen Bali */
+      color: white;
+      text-align: center;
+      padding: 2rem 2;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif; /* Font yang lebih klasik */
+    }
+    header::before,
+    header::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      background-image: url('https://via.placeholder.com/1200x50'); /* Ganti dengan ornamen Bali */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    header::before {
+      top: 0;
+      left: 0;
+    }
+    header::after {
+      bottom: 0;
+      left: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 0.5rem 0;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+  background-image: url('image/Background.jpg'); /* Ganti dengan gambar tradisi Mejarag */
+  background-size: cover;
+  background-position: center 13%; /* Geser gambar ke bawah 30% dari tinggi area */
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+  position: relative;
+}
+
+
+/* Membuat overlay abu-abu semi-transparan */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.689); /* Warna abu-abu dengan transparansi */
+  z-index: 1; /* Pastikan overlay berada di atas gambar, tapi di bawah teks */
+}
+
+.hero h2, .hero p {
+  position: relative;
+  z-index: 2; /* Membuat teks berada di atas overlay */
+}
+
+    .hero h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #a0522d;
+      position: relative;
+    }
+    .section h3::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: #ffd700; /* Garis kuning emas */
+    }
+    .section p {
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .values {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .value-item {
+      flex: 1;
+      background: #fff;
+      border: 2px solid #a0522d;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .value-item h4 {
+      color: #a0522d;
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    .value-item p {
+      margin: 0.5rem 0 0;
+      position: relative;
+      z-index: 2;
+    }
+    .value-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-image: url('https://via.placeholder.com/150x40'); /* Ganti dengan ornamen Bali */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      position: relative;
+    }
+    footer p {
+      margin: 0;
+    }
+    footer::before,
+    footer::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      background-image: url('https://via.placeholder.com/1200x50'); /* Ganti dengan ornamen Bali */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    footer::before {
+      top: 0;
+      left: 0;
+    }
+    footer::after {
+      bottom: 0;
+      left: 0;
+    }
+    @media (max-width: 768px) {
+      .values {
+        flex-direction: column;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="image/logo1.jpg" alt="Left Image" class="navbar-image left">
+    <h1>TRI HITA KARANA DAN TRADISI MEJARAG</h1>
+    <img src="image/logo2.png" alt="Right Image" class="navbar-image right">
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#nilai">Nilai</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+  <div class="hero">
+    <h2>MELESTARIKAN TRADISI MEJARAG</h2>
+    <p>Harmoni antara manusia, alam, dan Tuhan melalui nilai Tri Hita Karana.</p>
+  </div>
+  <div class="container">
+    <section id="tentang" class="section">
+      <h3>Tentang Tradisi Mejarag</h3>
+      <p>Tradisi Mejarag adalah salah satu tradisi unik yang dijalankan oleh masyarakat Desa Sebatu, Bali. Tradisi ini menggambarkan harmoni antara manusia, alam, dan Sang Pencipta, yang sejalan dengan nilai-nilai Tri Hita Karana. Melalui tradisi ini, masyarakat menjaga keseimbangan hidup dengan saling membantu, menghormati lingkungan, dan beribadah kepada Tuhan Yang Maha Esa.</p>
+    </section>
+    <section id="nilai" class="section">
+      <h3>Nilai-Nilai Tri Hita Karana</h3>
+      <div class="values">
+        <div class="value-item">
+          <h4>Parahyangan</h4>
+          <p>Hubungan harmonis antara manusia dengan Tuhan melalui ibadah dan tradisi spiritual.</p>
+        </div>
+        <div class="value-item">
+          <h4>Pawongan</h4>
+          <p>Hubungan harmonis antara sesama manusia melalui gotong royong dan kebersamaan.</p>
+        </div>
+        <div class="value-item">
+          <h4>Palemahan</h4>
+          <p>Hubungan harmonis antara manusia dengan alam melalui pelestarian lingkungan.</p>
+        </div>
+      </div>
+    </section>
+    <section id="galeri" class="section">
+      <h3>Galeri Tradisi</h3>
+      <p>Berikut adalah beberapa gambar yang menggambarkan tradisi Mejarag dan nilai Tri Hita Karana:</p>
+     <img src="Galery/foto 1.jpg" alt="" height="155">
+     <img src="Galery/foto 2.jpg" alt="" height="155">
+     <img src="Galery/foto 3.jpg" alt="" height="155">
+     <img src="Galery/foto 4.jpg" alt="" height="155">
+     <img src="Galery/foto 5.jpg" alt="" height="155">
+      <!-- <p>(Tambahkan galeri gambar di sini)</p> -->
+    </section>
+    <section id="kontak" class="section">
+      <h3>Kontak Kami</h3>
+      <p>Jika Anda memiliki pertanyaan atau ingin mengetahui lebih lanjut tentang tradisi Mejarag, silakan hubungi kami melalui:</p>
+      <p>Email: info@desasebatu.com</p>
+    </section>
+  </div>
+  <footer>
+    <p>© 2024 Desa Sebatu. Semua Hak Dilindungi.</p>
+  </footer>
+
+
+</body></html>
